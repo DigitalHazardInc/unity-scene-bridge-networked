@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.huntergoodin.sceneloader": {
-      "version": "file:com.huntergoodin.sceneloader",
+    "com.huntergoodin.scenebridge": {
+      "version": "file:com.huntergoodin.scenebridge",
       "depth": 0,
       "source": "embedded",
       "dependencies": {

@@ -1,12 +1,10 @@
 {
-	"name": "com.huntergoodin.sceneloader.Editor",
-	"rootNamespace": "HunterGoodin.SceneLoader",
+	"name": "com.huntergoodin.scenebridge.Runtime",
+	"rootNamespace": "HunterGoodin.SceneBridge",
 	"references": [
-		"com.huntergoodin.sceneloader.Runtime"
+	 	"Unity.TextMeshPro"
 	],
-	"includePlatforms": [
-		"Editor"
-	],
+	"includePlatforms": [],
 	"excludePlatforms": [],
 	"allowUnsafeCode": false,
 	"overrideReferences": false,
