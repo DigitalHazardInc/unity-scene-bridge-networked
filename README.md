@@ -1,4 +1,4 @@
-# Unity Package CI/CD System Template 
+# Unity Asynchronous Scene Loading System
 
 Check out [Releases](https://github.com/Persomatey/unity-asynchronous-scene-loading-system/releases) tab to see a history of all versions of this package. 
 
