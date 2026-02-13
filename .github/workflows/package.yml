@@ -15,7 +15,7 @@ permissions:
 
 env:
   PROJECT_PATH: unity_project
-  PACKAGE_NAME: com.huntergoodin.sceneloader
+  PACKAGE_NAME: com.huntergoodin.scenebridge
 
 jobs:
   determineVersion:
