@@ -1,8 +1,8 @@
 {
-	"name": "com.yourcompany.packagename.Editor",
-	"rootNamespace": "YourCompany.PackageName",
+	"name": "com.huntergoodin.sceneloader.Editor",
+	"rootNamespace": "HunterGoodin.SceneLoader",
 	"references": [
-		"com.yourcompany.packagename.Runtime"
+		"com.huntergoodin.sceneloader.Runtime"
 	],
 	"includePlatforms": [
 		"Editor"
