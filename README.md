@@ -1,4 +1,8 @@
-# Unity Asynchronous Scene Loading System
+# Unity Scene Bridge
+
+A simple additive scene loading system with a built-in loading screen workflow.
+
+Loads scenes asynchronously in the background, keeps them inactive until fully ready, displays a loading canvas during the transition, and then cleanly activates the new scene while unloading the old one. Designed to provide smooth, controlled scene transitions with minimal setup.
 
 Check out [Releases](https://github.com/Persomatey/unity-asynchronous-scene-loading-system/releases) tab to see a history of all versions of this package. 
 
@@ -11,9 +15,9 @@ Check out [Releases](https://github.com/Persomatey/unity-asynchronous-scene-load
 </details>
 
 For latest release:</br>
-`https://github.com/Persomatey/unity-scene-loading-system.git#upm`</br>
+`https://github.com/Persomatey/unity-scene-bridge.git#upm`</br>
 Or install specific releases:</br>
-`https://github.com/Persomatey/unity-scene-loading-system.git#v0.0.1`
+`https://github.com/Persomatey/unity-scene-bridge.git#v0.0.1`
 
 ### Download the tarball directly from release
 <details>
@@ -21,9 +25,9 @@ Or install specific releases:</br>
 	  <img src="https://raw.githubusercontent.com/Persomatey/unity-package-ci-cd-system-template/refs/heads/main/images/release-tab-tarball-circled.png">
 </details>
 
-`com.huntergoodin.asyncsceneloader-v#.#.#.tgz`
+`com.huntergoodin.scenebridge-v#.#.#.tgz`
 
-`com.huntergoodin.asyncsceneloader-v#.#.#.zip`
+`com.huntergoodin.scenebridge-v#.#.#.zip`
 
 <details>
 <summary>Select `Install package from tarball...` in the Package Manager</summary>
