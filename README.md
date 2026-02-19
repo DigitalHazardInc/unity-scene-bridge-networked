@@ -35,7 +35,7 @@ Or install specific releases:</br>
 </details>
 
 ## Set Up 
-1. [Install the package](https://github.com/Persomatey/unity-scene-bridge/README.md#installation)
+1. [Install the package](https://github.com/Persomatey/unity-scene-bridge/main/README.md#installation)
 2. Drag the `SceneBridge Loader` prefab into your scene
 3. Feel free to create your own transition canvases
 
@@ -51,7 +51,7 @@ Or install specific releases:</br>
 	- Loading screen can display the current progress of the `AsyncOperation`
 	- Loading screen can display various backgrounds with a random selection from an array in the `SceneBridge Loader` prefab
 	- Loading screen can display various text snippets (for tips, lore tidbits, etc.) with a random selection from an array in the `SceneBridge Loader` prefab
- 	- Five types of loading screens (more details in the [Loading Screens section](https://github.com/Persomatey/unity-scene-bridge/edit/main/README.md#loading-screens)):
+ 	- Five types of loading screens (more details in the [Loading Screens section](https://github.com/Persomatey/unity-scene-bridge/main/README.md#loading-screens)):
 		```
 		└── LoadingScreen
   			└── AutomaticLoadingScreen
