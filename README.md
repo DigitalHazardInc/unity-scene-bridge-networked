@@ -51,7 +51,7 @@ Or install specific releases:</br>
 	- Loading screen can display the current progress of the `AsyncOperation`
 	- Loading screen can display various backgrounds with a random selection from an array in the `SceneBridge Loader` prefab
 	- Loading screen can display various text snippets (for tips, lore tidbits, etc.) with a random selection from an array in the `SceneBridge Loader` prefab
- 	- Five types of loading screens (more details in the [Loading Screens section](https://github.com/Persomatey/unity-scene-bridge/main/README.md#loading-screens)):
+ 	- Five types of loading screens (more details in the [Loading Screens section](https://github.com/Persomatey/unity-scene-bridge/#loading-screens)):
 		```
 		└── LoadingScreen
   			└── AutomaticLoadingScreen
