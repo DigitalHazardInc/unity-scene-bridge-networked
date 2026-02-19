@@ -152,8 +152,6 @@ Or install specific releases:</br>
      	4. Unload old scene
 		5. Disable/reset loading screen 
 	- Takes a string (`sceneName`) for the scenes name you're loading into
-	- Takes an int (`transitionInIndex`) for the "transition in" animation (for anim in the index of `SceneBridgeLoader.transitionCanvases`)
-	- Takes an int (`transitionOutIndex`) for the "transition out" animation (for anim in the index of `SceneBridgeLoader.transitionCanvases`)
 
 ## Future Plans 
 *No plans on when I'd release these features, would likely depend on my needs for a specific project/boredom/random interest in moving this project along.*
