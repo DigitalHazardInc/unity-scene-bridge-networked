@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Open Scene B
+  m_text: Open Scene A
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -858,7 +858,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scene A
+  m_text: 'Scene B
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1118,7 +1120,7 @@ GameObject:
   - component: {fileID: 1690169461}
   - component: {fileID: 1690169460}
   m_Layer: 5
-  m_Name: Scene B Btn
+  m_Name: Scene A Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1197,7 +1199,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ExampleSceneB
+          m_StringArgument: ExampleSceneA
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1690169461
@@ -1375,111 +1377,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051254416}
   m_CullTransparentMesh: 1
---- !u!1001 &7125940136056993316
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2999893749870690686, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999893749870690686, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999893749870690686, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999893749870690686, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999893749870690686, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999893749870690686, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999893749870690686, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999893749870690686, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999893749870690686, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999893749870690686, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6389183291996488872, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: tips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6389183291996488872, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: 'tips.Array.data[0]'
-      value: Example tip
-      objectReference: {fileID: 0}
-    - target: {fileID: 6389183291996488872, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: 'tips.Array.data[1]'
-      value: Example lore tidbit
-      objectReference: {fileID: 0}
-    - target: {fileID: 6389183291996488872, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: backgroundSprites.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6389183291996488872, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: 'backgroundSprites.Array.data[0]'
-      value: 
-      objectReference: {fileID: 21300000, guid: 41ddbd7e4ba5ad84090b5f36a79c317f, type: 3}
-    - target: {fileID: 6389183291996488872, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: 'backgroundSprites.Array.data[1]'
-      value: 
-      objectReference: {fileID: 21300000, guid: 7972d585e148dfa4992e7a2ca3e38ebb, type: 3}
-    - target: {fileID: 8741336522388251909, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: tips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8741336522388251909, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: 'tips.Array.data[0]'
-      value: Example tip
-      objectReference: {fileID: 0}
-    - target: {fileID: 8741336522388251909, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: 'tips.Array.data[1]'
-      value: Example lore tidbit
-      objectReference: {fileID: 0}
-    - target: {fileID: 8741336522388251909, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: backgroundSprites.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8741336522388251909, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: 'backgroundSprites.Array.data[0]'
-      value: 
-      objectReference: {fileID: 21300000, guid: 41ddbd7e4ba5ad84090b5f36a79c317f, type: 3}
-    - target: {fileID: 8741336522388251909, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: 'backgroundSprites.Array.data[1]'
-      value: 
-      objectReference: {fileID: 21300000, guid: 7972d585e148dfa4992e7a2ca3e38ebb, type: 3}
-    - target: {fileID: 9215604087740055732, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
-      propertyPath: m_Name
-      value: Scene Bridge Loader
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 35cb89e5bf9a81d46b28344e4a0d00fb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1489,4 +1386,3 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 651171834}
   - {fileID: 1004588670}
-  - {fileID: 7125940136056993316}
