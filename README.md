@@ -81,10 +81,38 @@ Or install specific releases:</br>
 		- Pass which transition index you want to play by passing it as a variable to the functions outlined below 
 	- Feel free to create your own transition animations! 
 - Several scene loading functions:
-	- Outlined in the [Loading Functions](https://github.com/Persomatey/unity-scene-bridge/edit/main/README.md#loading-functions) section 
+	- Outlined in the [Loading Functions](https://github.com/Persomatey/unity-scene-bridge/#loading-functions) section 
 - Scene Cleanup
 	– Automatically unload previous scenes after switching to the new one
 - (Optional) DontDestroyOnLoad support for persistence across scenes
+
+### Loading Screens 
+#### Base Classes (not meant to actually be used): 
+- Loading Screen
+	- `LoadingScreen.cs`
+ 	- Base class for all loading screens 
+- Gated Loading Screen
+	- `GatedLoadingScreen.cs`
+ 	- Base class for gated loading screens 
+#### Derived classes (meant to be used): 
+- Automatic Loading Screen
+	- `AutomaticLoadingScreen.cs`
+ 	- Loads directly into the next scene automatically when the scene is ready  
+	- Example Canvas provided in the `SceneBridge Loader` prefab 
+- UI Gated Loading Screen
+	- `UIGatedLoadingScreen.cs`
+ 	- Progression blocked behind a button press
+    - Example Canvas provided in the `SceneBridge Loader` prefab 
+- Input Manager Gated Loading Screen
+	- `InputManagerGatedLoadingScreen.cs`
+ 	- Uses Unity's old [Input Manager](https://docs.unity3d.com/6000.3/Documentation/Manual/class-InputManager.html)
+	- Progression blocked behind a `if (Input.GetKeyDown())` logic gate 
+	- Example Canvas provided in the `SceneBridge Loader` prefab 
+- Input System Gated Loading Screen
+	- `InputSystemGatedLoadingScreen.cs`
+	- Uses Unity's new [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@latest/)
+ 	- Progression blocked behind a `if (anyButton.IsPressed())` logic gate 
+	- Example Canvas provided in the `SceneBridge Loader` prefab 
 
 ### Loading Functions 
 - Load Scene Asynchronously With Loading Screen And Transitions
@@ -126,34 +154,6 @@ Or install specific releases:</br>
 	- Takes a string (`sceneName`) for the scenes name you're loading into
 	- Takes an int (`transitionInIndex`) for the "transition in" animation (for anim in the index of `SceneBridgeLoader.transitionCanvases`)
 	- Takes an int (`transitionOutIndex`) for the "transition out" animation (for anim in the index of `SceneBridgeLoader.transitionCanvases`)
-
-### Loading Screens 
-#### Base Classes (not meant to actually be used): 
-- Loading Screen
-	- `LoadingScreen.cs`
- 	- Base class for all loading screens 
-- Gated Loading Screen
-	- `GatedLoadingScreen.cs`
- 	- Base class for gated loading screens 
-#### Derived classes (meant to be used): 
-- Automatic Loading Screen
-	- `AutomaticLoadingScreen.cs`
- 	- Loads directly into the next scene automatically when the scene is ready  
-	- Example Canvas provided in the `SceneBridge Loader` prefab 
-- UI Gated Loading Screen
-	- `UIGatedLoadingScreen.cs`
- 	- Progression blocked behind a button press
-    - Example Canvas provided in the `SceneBridge Loader` prefab 
-- Input Manager Gated Loading Screen
-	- `InputManagerGatedLoadingScreen.cs`
- 	- Uses Unity's old [Input Manager](https://docs.unity3d.com/6000.3/Documentation/Manual/class-InputManager.html)
-	- Progression blocked behind a `if (Input.GetKeyDown())` logic gate 
-	- Example Canvas provided in the `SceneBridge Loader` prefab 
-- Input System Gated Loading Screen
-	- `InputSystemGatedLoadingScreen.cs`
-	- Uses Unity's new [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@latest/)
- 	- Progression blocked behind a `if (anyButton.IsPressed())` logic gate 
-	- Example Canvas provided in the `SceneBridge Loader` prefab 
 
 ## Future Plans 
 *No plans on when I'd release these features, would likely depend on my needs for a specific project/boredom/random interest in moving this project along.*
