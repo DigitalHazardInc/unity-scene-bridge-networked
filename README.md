@@ -35,7 +35,7 @@ Or install specific releases:</br>
 </details>
 
 ## Set Up 
-1. [Install the package](https://github.com/Persomatey/unity-scene-bridge/edit/main/README.md#installation)
+1. [Install the package](https://github.com/Persomatey/unity-scene-bridge/README.md#installation)
 2. Drag the `SceneBridge Loader` prefab into your scene
 3. Feel free to create your own transition canvases
 
