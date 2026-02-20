@@ -56,8 +56,8 @@ Or install specific releases:</br>
 		└── LoadingScreen
   			└── AutomaticLoadingScreen
     		└── GatedLoadingScreen
-    			├── UIButtonGatedLoadingScreen
-    			├── OldInputManagerGatedLoadingScreen
+    			├── UIGatedLoadingScreen
+    			├── InputManagerGatedLoadingScreen
     			└── InputSystemGatedLoadingScreen
 		```
 - Scene transition animation support
