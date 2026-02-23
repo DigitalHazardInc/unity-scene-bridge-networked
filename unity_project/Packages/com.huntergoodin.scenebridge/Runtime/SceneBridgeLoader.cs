@@ -132,6 +132,7 @@ namespace HunterGoodin.SceneBridge
 			SceneManager.UnloadSceneAsync(curScene);
 
 			// Loading Screen / wait for transition out animation 
+			loadingScreen.SetLoadingBarAmount(0.0f);
 			chosenLoadingScreenCanvas.SetActive(false);
 			yield return new WaitForSeconds(transitionMidPointDuration);
 
@@ -245,7 +246,11 @@ namespace HunterGoodin.SceneBridge
 			SceneManager.UnloadSceneAsync(curScene);
 
 			// Deactivate loading screen 
+			loadingScreen.SetLoadingBarAmount(0.0f);
 			chosenLoadingScreenCanvas.SetActive(false);
+
+			// Reset 
+			loadIntoNewSceenAllowed = false;
 		}
 
 		public void ContinueToNewScene()
