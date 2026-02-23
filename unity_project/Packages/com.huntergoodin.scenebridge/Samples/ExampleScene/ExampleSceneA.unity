@@ -3239,6 +3239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab48194912be56d45ba956efad01358e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addToDontDestroyOnLoad: 1
   transitionCanvases:
   - {fileID: 5697416952338647633}
   - {fileID: 1963266583381211186}
@@ -3247,7 +3248,7 @@ MonoBehaviour:
   - {fileID: 7478882966157245218}
   - {fileID: 1814018254}
   - {fileID: 1047191702}
-  chosenLoadingScreenCanvas: {fileID: 2327404912142731865}
+  chosenLoadingScreenCanvas: {fileID: 7478882966157245218}
   animationDuration: 1
   transitionMidPointDuration: 0.5
 --- !u!224 &1405086695622090576
