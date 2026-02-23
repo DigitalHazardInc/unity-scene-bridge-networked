@@ -168,4 +168,9 @@ Or install specific releases:</br>
 
 ## Future Plans 
 *No plans on when I'd release these features, would likely depend on my needs for a specific project/boredom/random interest in moving this project along.*
-- Hello, World! 
+- Minimum loading screen duration
+	- Add a variable to all loading screens that has X seconds (tunable) alive to prevent loading screens from flashing too quickly on fast loads 
+- Timer Conditional Loading Screen 
+	- A type of derived loading screen (one for each type of screen) that stays on the mid-transition animation until X seconds (tunable) before it decides to show the loading screen.
+		- Maybe inheritance isn't the best call here... maybe make this a toggleable option in all loading screen classes? Or use a design pattern like an Interface or something?
+	- Another solution to the "loading screens from flashing too quickly on fast loads" problem but also one that some games might just feel better with 
