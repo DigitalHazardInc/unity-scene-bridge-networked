@@ -1248,11 +1248,6 @@ MonoBehaviour:
   transitionOutIndexSecond: 0
   transitionInIndex: 0
   transitionOutIndex: 0
---- !u!1 &1017059048 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9159279480385727150, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
-  m_PrefabInstance: {fileID: 6079129277652727624}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1586069939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,10 +1735,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2158422868382570588, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
-      propertyPath: chosenLoadingScreenCanvas
-      value: 
-      objectReference: {fileID: 1017059048}
     - target: {fileID: 3668913004073616554, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
       propertyPath: textColors.Array.size
       value: 2

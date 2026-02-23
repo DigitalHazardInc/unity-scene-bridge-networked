@@ -17,7 +17,7 @@ namespace HunterGoodin.SceneBridge
 		[SerializeField] private bool coorelateHeaderColorWithBackgoundImg;
 		[SerializeField] private bool coorelateloadingBarColorWithBackgoundImg;
 		[SerializeField] internal Color[] colors;
-		[SerializeField] internal int bgRand; 
+		internal int bgRand; 
 
 		[Header("Values to set")]
 		[SerializeField] private Sprite[] backgroundSprites;
