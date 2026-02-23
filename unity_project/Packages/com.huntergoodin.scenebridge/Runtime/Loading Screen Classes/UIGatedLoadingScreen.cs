@@ -5,6 +5,7 @@ namespace HunterGoodin.SceneBridge
 {
 	public class UIGatedLoadingScreen : LoadingScreen
 	{
+		[Header("Scene References")]
 		[SerializeField] private Button progressButton;
 
 		public override void ReadyToLoadNewScene()

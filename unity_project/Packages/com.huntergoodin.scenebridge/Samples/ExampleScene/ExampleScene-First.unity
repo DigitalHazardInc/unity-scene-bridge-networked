@@ -1248,6 +1248,11 @@ MonoBehaviour:
   transitionOutIndexSecond: 0
   transitionInIndex: 0
   transitionOutIndex: 0
+--- !u!1 &1017059048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9159279480385727150, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+  m_PrefabInstance: {fileID: 6079129277652727624}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1586069939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +1672,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 924457755714152853, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 924457755714152853, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 924457755714152853, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 924457755714152853, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 924457755714152853, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 924457755714152853, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470828622142754329, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: m_Name
+      value: Header TMP
+      objectReference: {fileID: 0}
     - target: {fileID: 1489853237857628362, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1707,9 +1740,97 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2158422868382570588, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: chosenLoadingScreenCanvas
+      value: 
+      objectReference: {fileID: 1017059048}
+    - target: {fileID: 3668913004073616554, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668913004073616554, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668913004073616554, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668913004073616554, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668913004073616554, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668913004073616554, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453617087409343236, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: m_Name
+      value: Header TMP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992146227861750259, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992146227861750259, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992146227861750259, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992146227861750259, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992146227861750259, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992146227861750259, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080751495311435175, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: m_Name
+      value: Header TMP
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401223926378061650, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: m_Name
+      value: Header TMP
+      objectReference: {fileID: 0}
     - target: {fileID: 5765619506113275031, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
       propertyPath: m_Name
       value: SceneBridge Loader
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068350217581011347, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068350217581011347, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068350217581011347, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068350217581011347, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068350217581011347, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068350217581011347, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: textColors.Array.data[1].a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

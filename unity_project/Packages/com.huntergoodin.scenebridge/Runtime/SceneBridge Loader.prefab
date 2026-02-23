@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 8265525777338742959}
   - component: {fileID: 5653849320021711825}
   m_Layer: 5
-  m_Name: Loading TMP
+  m_Name: Header TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -806,8 +806,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8275326023716263068}
-  - {fileID: 2947411115939896959}
   - {fileID: 1933893954478395216}
+  - {fileID: 2947411115939896959}
   - {fileID: 7822469932950852710}
   m_Father: {fileID: 1489853237857628362}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -891,9 +891,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7308e5e8314e97948848cd561efa637e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  headerTMP: {fileID: 5653849320021711825}
   backgroundImg: {fileID: 378816099190633660}
   tipTmp: {fileID: 2213816431655529118}
   progressBar: {fileID: 3247815326546213300}
+  coorelateTipColorWithBackgoundImg: 1
+  coorelateHeaderColorWithBackgoundImg: 1
+  coorelateloadingBarColorWithBackgoundImg: 1
+  colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  bgRand: 0
   backgroundSprites:
   - {fileID: 21300000, guid: 28ac378c6d0bc7743b38fbe79f327100, type: 3}
   - {fileID: 21300000, guid: 7a81cb936eeb8f4428688dff7cc20882, type: 3}
@@ -987,7 +995,7 @@ GameObject:
   - component: {fileID: 3270737979671702686}
   - component: {fileID: 7334123109998918297}
   m_Layer: 5
-  m_Name: Loading TMP
+  m_Name: Header TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1145,8 +1153,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6965742284689844952}
-  - {fileID: 847032469365012379}
   - {fileID: 6491676139219189980}
+  - {fileID: 847032469365012379}
   - {fileID: 7607945258858333566}
   - {fileID: 8863035698756576850}
   m_Father: {fileID: 1489853237857628362}
@@ -1231,9 +1239,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0262fb75e96f745aee359046ab4679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  headerTMP: {fileID: 7334123109998918297}
   backgroundImg: {fileID: 8736525270573463399}
   tipTmp: {fileID: 6327599958364378669}
   progressBar: {fileID: 2980696090805455533}
+  coorelateTipColorWithBackgoundImg: 1
+  coorelateHeaderColorWithBackgoundImg: 1
+  coorelateloadingBarColorWithBackgoundImg: 1
+  colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  bgRand: 0
   backgroundSprites:
   - {fileID: 21300000, guid: 28ac378c6d0bc7743b38fbe79f327100, type: 3}
   - {fileID: 21300000, guid: 7a81cb936eeb8f4428688dff7cc20882, type: 3}
@@ -1241,6 +1257,7 @@ MonoBehaviour:
   - I've got a tip for you!
   - I'm all out of tips for you...
   progressionTMPObj: {fileID: 1168470137680761675}
+  coorelateProgColorWithBackgoundImg: 1
 --- !u!1 &4580024625606413036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,7 +1866,7 @@ GameObject:
   - component: {fileID: 6226224514073319107}
   - component: {fileID: 3728898780010439391}
   m_Layer: 5
-  m_Name: Loading TMP
+  m_Name: Header TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2082,8 +2099,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2736825716467062120}
-  - {fileID: 4930000132912197055}
   - {fileID: 6126412880588424065}
+  - {fileID: 4930000132912197055}
   - {fileID: 1748988969033402612}
   - {fileID: 9090531372497024261}
   m_Father: {fileID: 1489853237857628362}
@@ -2168,9 +2185,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8863760a047744b39092182dad4a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  headerTMP: {fileID: 4678096253528500630}
   backgroundImg: {fileID: 6334566023805497020}
   tipTmp: {fileID: 1360488320552475357}
   progressBar: {fileID: 7560769555213950363}
+  coorelateTipColorWithBackgoundImg: 1
+  coorelateHeaderColorWithBackgoundImg: 1
+  coorelateloadingBarColorWithBackgoundImg: 1
+  colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  bgRand: 0
   backgroundSprites:
   - {fileID: 21300000, guid: 28ac378c6d0bc7743b38fbe79f327100, type: 3}
   - {fileID: 21300000, guid: 7a81cb936eeb8f4428688dff7cc20882, type: 3}
@@ -2190,7 +2215,7 @@ GameObject:
   - component: {fileID: 2615010877382904093}
   - component: {fileID: 4678096253528500630}
   m_Layer: 5
-  m_Name: Loading TMP
+  m_Name: Header TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2449,7 +2474,7 @@ MonoBehaviour:
   - {fileID: 5256160161211292313}
   - {fileID: 9159279480385727150}
   - {fileID: 4478860195289866085}
-  chosenLoadingScreenCanvas: {fileID: 5256160161211292313}
+  chosenLoadingScreenCanvas: {fileID: 9159279480385727150}
   animationDuration: 0.5
   transitionMidPointDuration: 0.25
 --- !u!1 &5782237421048387879
@@ -3121,8 +3146,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 783411699850515141}
-  - {fileID: 8352061204683024878}
   - {fileID: 7975599703596481571}
+  - {fileID: 8352061204683024878}
   - {fileID: 5271783951462162034}
   - {fileID: 776171883273896073}
   m_Father: {fileID: 1489853237857628362}
@@ -3207,9 +3232,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7316413e35c56964eb4ddd7a310b4fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  headerTMP: {fileID: 3728898780010439391}
   backgroundImg: {fileID: 963418298617162498}
   tipTmp: {fileID: 8394579142519235256}
   progressBar: {fileID: 8528688083073814120}
+  coorelateTipColorWithBackgoundImg: 1
+  coorelateHeaderColorWithBackgoundImg: 1
+  coorelateloadingBarColorWithBackgoundImg: 1
+  colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  bgRand: 0
   backgroundSprites:
   - {fileID: 21300000, guid: 28ac378c6d0bc7743b38fbe79f327100, type: 3}
   - {fileID: 21300000, guid: 7a81cb936eeb8f4428688dff7cc20882, type: 3}
@@ -3217,3 +3250,4 @@ MonoBehaviour:
   - I've got a tip for you!
   - I'm all out of tips for you...
   progressionTMPObj: {fileID: 2781991032086277078}
+  coorelateProgColorWithBackgoundImg: 1

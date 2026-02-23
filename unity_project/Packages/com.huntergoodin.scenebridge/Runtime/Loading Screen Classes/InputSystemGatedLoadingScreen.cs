@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,7 +8,12 @@ namespace HunterGoodin.SceneBridge
 	{
 		private PlayerInput input;
 		private InputAction progressionAction;
+
+		[Header("Scene References")]
 		[SerializeField] private GameObject progressionTMPObj;
+
+		[Header("Color Coordination")]
+		[SerializeField] private bool coorelateProgColorWithBackgoundImg;
 
 		private void Awake()
 		{
@@ -23,14 +29,16 @@ namespace HunterGoodin.SceneBridge
 			}
 		}
 
-		void OnEnable()
+		internal new void OnEnable()
 		{
-			progressionAction = input.LoadingScreen.Progression;
+			base.OnEnable();
+			progressionTMPObj.GetComponent<TextMeshProUGUI>().color = colors[bgRand];
 
+			progressionAction = input.LoadingScreen.Progression;
 			progressionAction.Enable();
 		}
 
-		void OnDisable()
+		private void OnDisable()
 		{
 			progressionAction.Disable();
 		}

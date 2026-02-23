@@ -1,9 +1,6 @@
-using Codice.CM.WorkspaceServer.DataStore.Configuration;
 using System.Collections;
-using System.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 namespace HunterGoodin.SceneBridge
 {
