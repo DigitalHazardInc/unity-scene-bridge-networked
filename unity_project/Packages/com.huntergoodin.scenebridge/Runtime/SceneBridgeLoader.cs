@@ -220,8 +220,6 @@ namespace HunterGoodin.SceneBridge
 			yield return new WaitForEndOfFrame();
 			loadingScreen.SetLoadingBarAmount(1.0f);
 
-			Debug.Log("We're at 90%");
-
 			// Allow scene switching 
 			loadingScreen.ReadyToLoadNewScene();
 			Debug.Log("New Scene ready!");
@@ -231,8 +229,6 @@ namespace HunterGoodin.SceneBridge
 			{
 				yield return new WaitForEndOfFrame();
 			}
-
-			Debug.Log("Loading screen says we're ready now");
 
 			// Let new scene go 
 			newScene.allowSceneActivation = true;
@@ -254,7 +250,6 @@ namespace HunterGoodin.SceneBridge
 
 		public void ContinueToNewScene()
 		{
-			Debug.Log("ContinueToNewScene()"); 
 			loadIntoNewSceenAllowed = true;
 		}
 	}
