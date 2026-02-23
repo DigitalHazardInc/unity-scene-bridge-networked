@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace HunterGoodin.SceneBridge
 {
@@ -19,21 +20,34 @@ namespace HunterGoodin.SceneBridge
 		public void LoadWithLoadingScreenAndTransisions()
 		{
 			SceneBridgeLoader.Instance.LoadSceneAsynchronouslyWithLoadingScreenAndTransition(sceneName, transitionInIndexFirst, transitionOutIndexFirst, transitionInIndexSecond, transitionOutIndexSecond);
+			DisableAllButtons(); 
 		}
 
 		public void LoadWithTransitionsOnly()
 		{
 			SceneBridgeLoader.Instance.LoadSceneAsynchronouslyWithTransitionOnly(sceneName, transitionInIndex, transitionOutIndex);
+			DisableAllButtons(); 
 		}
 
 		public void LoadWithLoadingScreenOnly()
 		{
 			SceneBridgeLoader.Instance.LoadSceneAsynchronouslyWithLoadingScreenOnly(sceneName);
+			DisableAllButtons(); 
 		}
 
 		public void ChangeScreen()
 		{
 			SceneBridgeLoader.Instance.ChangeLoadingScreenType(SceneBridgeLoader.LoadingScreenType.UIGated); 
+		}
+
+		private void DisableAllButtons()
+		{
+			Button[] btns = GetComponentsInChildren<Button>(); 
+
+			for (int i = 0; i < btns.Length; i++)
+			{
+				btns[i].interactable = false; 
+			}
 		}
 	}
 }
