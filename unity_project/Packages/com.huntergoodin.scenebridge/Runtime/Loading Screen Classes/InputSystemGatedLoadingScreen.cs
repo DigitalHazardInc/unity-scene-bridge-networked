@@ -13,7 +13,7 @@ namespace HunterGoodin.SceneBridge
 		[SerializeField] private GameObject progressionTMPObj;
 
 		[Header("Color Coordination")]
-		[SerializeField] private bool coorelateProgColorWithBackgoundImg;
+		[SerializeField] private bool correlateProgColorWithBackgoundImg;
 
 		private void Awake()
 		{

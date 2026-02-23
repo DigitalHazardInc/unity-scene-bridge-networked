@@ -13,9 +13,9 @@ namespace HunterGoodin.SceneBridge
 		[SerializeField] private Image progressBar;
 
 		[Header("Color Coordination")]
-		[SerializeField] private bool coorelateTipColorWithBackgoundImg;
-		[SerializeField] private bool coorelateHeaderColorWithBackgoundImg;
-		[SerializeField] private bool coorelateloadingBarColorWithBackgoundImg;
+		[SerializeField] private bool correlateTipColorWithBackgoundImg;
+		[SerializeField] private bool correlateHeaderColorWithBackgoundImg;
+		[SerializeField] private bool correlateloadingBarColorWithBackgoundImg;
 		[SerializeField] internal Color[] colors;
 		internal int bgRand; 
 
@@ -29,17 +29,17 @@ namespace HunterGoodin.SceneBridge
 			backgroundImg.sprite = backgroundSprites[bgRand];
 			tipTmp.text = tips[Random.Range(0, tips.Length)];
 
-			if (coorelateTipColorWithBackgoundImg)
+			if (correlateTipColorWithBackgoundImg)
 			{
 				tipTmp.color = colors[bgRand];
 			}
 
-			if (coorelateHeaderColorWithBackgoundImg)
+			if (correlateHeaderColorWithBackgoundImg)
 			{
 				headerTMP.color = colors[bgRand];
 			}
 
-			if (coorelateloadingBarColorWithBackgoundImg)
+			if (correlateloadingBarColorWithBackgoundImg)
 			{
 				progressBar.color = colors[bgRand];
 			}
