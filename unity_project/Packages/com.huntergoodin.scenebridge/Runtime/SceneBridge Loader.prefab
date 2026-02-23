@@ -895,13 +895,12 @@ MonoBehaviour:
   backgroundImg: {fileID: 378816099190633660}
   tipTmp: {fileID: 2213816431655529118}
   progressBar: {fileID: 3247815326546213300}
-  coorelateTipColorWithBackgoundImg: 1
-  coorelateHeaderColorWithBackgoundImg: 1
-  coorelateloadingBarColorWithBackgoundImg: 1
+  correlateTipColorWithBackgoundImg: 1
+  correlateHeaderColorWithBackgoundImg: 1
+  correlateloadingBarColorWithBackgoundImg: 1
   colors:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0, g: 0, b: 0, a: 1}
-  bgRand: 0
   backgroundSprites:
   - {fileID: 21300000, guid: 28ac378c6d0bc7743b38fbe79f327100, type: 3}
   - {fileID: 21300000, guid: 7a81cb936eeb8f4428688dff7cc20882, type: 3}
@@ -1243,13 +1242,12 @@ MonoBehaviour:
   backgroundImg: {fileID: 8736525270573463399}
   tipTmp: {fileID: 6327599958364378669}
   progressBar: {fileID: 2980696090805455533}
-  coorelateTipColorWithBackgoundImg: 1
-  coorelateHeaderColorWithBackgoundImg: 1
-  coorelateloadingBarColorWithBackgoundImg: 1
+  correlateTipColorWithBackgoundImg: 1
+  correlateHeaderColorWithBackgoundImg: 1
+  correlateloadingBarColorWithBackgoundImg: 1
   colors:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0, g: 0, b: 0, a: 1}
-  bgRand: 0
   backgroundSprites:
   - {fileID: 21300000, guid: 28ac378c6d0bc7743b38fbe79f327100, type: 3}
   - {fileID: 21300000, guid: 7a81cb936eeb8f4428688dff7cc20882, type: 3}
@@ -1257,7 +1255,7 @@ MonoBehaviour:
   - I've got a tip for you!
   - I'm all out of tips for you...
   progressionTMPObj: {fileID: 1168470137680761675}
-  coorelateProgColorWithBackgoundImg: 1
+  correlateProgColorWithBackgoundImg: 1
 --- !u!1 &4580024625606413036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,13 +2187,12 @@ MonoBehaviour:
   backgroundImg: {fileID: 6334566023805497020}
   tipTmp: {fileID: 1360488320552475357}
   progressBar: {fileID: 7560769555213950363}
-  coorelateTipColorWithBackgoundImg: 1
-  coorelateHeaderColorWithBackgoundImg: 1
-  coorelateloadingBarColorWithBackgoundImg: 1
+  correlateTipColorWithBackgoundImg: 1
+  correlateHeaderColorWithBackgoundImg: 1
+  correlateloadingBarColorWithBackgoundImg: 1
   colors:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0, g: 0, b: 0, a: 1}
-  bgRand: 0
   backgroundSprites:
   - {fileID: 21300000, guid: 28ac378c6d0bc7743b38fbe79f327100, type: 3}
   - {fileID: 21300000, guid: 7a81cb936eeb8f4428688dff7cc20882, type: 3}
@@ -3236,13 +3233,12 @@ MonoBehaviour:
   backgroundImg: {fileID: 963418298617162498}
   tipTmp: {fileID: 8394579142519235256}
   progressBar: {fileID: 8528688083073814120}
-  coorelateTipColorWithBackgoundImg: 1
-  coorelateHeaderColorWithBackgoundImg: 1
-  coorelateloadingBarColorWithBackgoundImg: 1
+  correlateTipColorWithBackgoundImg: 1
+  correlateHeaderColorWithBackgoundImg: 1
+  correlateloadingBarColorWithBackgoundImg: 1
   colors:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0, g: 0, b: 0, a: 1}
-  bgRand: 0
   backgroundSprites:
   - {fileID: 21300000, guid: 28ac378c6d0bc7743b38fbe79f327100, type: 3}
   - {fileID: 21300000, guid: 7a81cb936eeb8f4428688dff7cc20882, type: 3}
@@ -3250,4 +3246,4 @@ MonoBehaviour:
   - I've got a tip for you!
   - I'm all out of tips for you...
   progressionTMPObj: {fileID: 2781991032086277078}
-  coorelateProgColorWithBackgoundImg: 1
+  correlateProgColorWithBackgoundImg: 1
