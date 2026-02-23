@@ -14,12 +14,13 @@
   },
   "dependencies": {
     "com.unity.textmeshpro": "3.0.6",
-    "com.unity.render-pipelines.core": "17.0.4"
+    "com.unity.render-pipelines.core": "17.0.4", 
+    "com.unity.inputsystem": "1.7.0"
   },
   "samples": [
     {
       "displayName": "Example Scenes",
-      "description": "Scenes displaying the ability to load from one scene to another with all steps in between. Using temp images from 'jkjkke' on opengameart.com\n\nLoad into ExampleSceneA first since that's where the singleton is loaded.",
+      "description": "Scenes displaying the ability to load from one scene to another with all steps in between. Using temp images from 'jkjkke' on opengameart.com\n\n(Load into ExampleSceneA first since that's where the singleton is loaded.)\n\n(Also, make sure to add all example scenes in File -> Build Profiles -> Scene List.)",
       "path": "Samples~/ExampleScene"
     }
   ]

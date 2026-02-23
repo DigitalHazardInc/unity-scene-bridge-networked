@@ -8,7 +8,8 @@ namespace HunterGoodin.SceneBridge
 	{
 		[Header("Scene References")]
 		[SerializeField] private Image backgroundImg;
-		[SerializeField] private TextMeshProUGUI tmp;
+		[SerializeField] private TextMeshProUGUI tipTmp;
+		[SerializeField] private Image progressBar;
 
 		[Header("Values to set")]
 		[SerializeField] private Sprite[] backgroundSprites;
@@ -17,12 +18,14 @@ namespace HunterGoodin.SceneBridge
 		private void OnEnable()
 		{
 			backgroundImg.sprite = backgroundSprites[Random.Range(0, backgroundSprites.Length)];
-			tmp.text = tips[Random.Range(0, tips.Length)]; 
+			tipTmp.text = tips[Random.Range(0, tips.Length)]; 
 		}
 
-		public virtual void ReadyToLoadNewScene()
+		public virtual void ReadyToLoadNewScene() { } 
+
+		public void SetLoadingBarAmount(float amount)
 		{
-			SceneBridgeLoader.Instance.ContinueToNewScene(); 
+			progressBar.fillAmount = amount;
 		}
 	}
 }

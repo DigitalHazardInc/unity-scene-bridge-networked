@@ -2,7 +2,8 @@
 	"name": "com.huntergoodin.scenebridge.Runtime",
 	"rootNamespace": "HunterGoodin.SceneBridge",
 	"references": [
-	 	"Unity.TextMeshPro"
+	 	"Unity.TextMeshPro", 
+		"Unity.InputSystem"
 	],
 	"includePlatforms": [],
 	"excludePlatforms": [],
