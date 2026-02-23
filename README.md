@@ -54,12 +54,13 @@ Or install specific releases:</br>
  	- Five types of loading screens (more details in the [Loading Screens section](https://github.com/Persomatey/unity-scene-bridge/#loading-screens)):
 		```
 		└── LoadingScreen
-  			└── AutomaticLoadingScreen
-    		└── GatedLoadingScreen
-    			├── UIGatedLoadingScreen
-    			├── InputManagerGatedLoadingScreen
-    			└── InputSystemGatedLoadingScreen
+  			├── AutomaticLoadingScreen
+    		├── UIGatedLoadingScreen
+    		├── InputManagerGatedLoadingScreen
+    		└── InputSystemGatedLoadingScreen
 		```
+- The loading screen you want can be set in `SceneBridgeLoader.chosenLoadingScreen`
+	- <img src="https://github.com/Persomatey/unity-scene-bridge/blob/main/images/PrefabInspectorScreenshot-ChosenLoadingScreenHighlighted.png?raw=true">
 - Scene transition animation support
 	- Transition animations can play into (and out of) screens
 		- Ex: Play a transition animation into the loading screen, then a transition animation into the new scene.
@@ -79,12 +80,18 @@ Or install specific releases:</br>
 			- Included in the nested `swipe Transition Canvas` canvas
 	- It's easy to swap in/out which animations you want into the `SceneBridgeLoader.transitionCanvases` array
 		- Pass which transition index you want to play by passing it as a variable to the functions outlined below 
-	- Feel free to create your own transition animations! 
+	- Feel free to create your own transition animations!
+ 		- Remember to add them to the `SceneBridgeLoader.transitionCanvases` array 
+		- <img src="https://github.com/Persomatey/unity-scene-bridge/blob/main/images/PrefabInspectorScreenshot-TransitionArrHighlighted.png?raw=true">
 - Several scene loading functions:
-	- Outlined in the [Loading Functions](https://github.com/Persomatey/unity-scene-bridge/#loading-functions) section 
+	- Outlined in the [Loading Functions](https://github.com/Persomatey/unity-scene-bridge/#loading-functions) section
+ 	- Maybe sometimes you want the loading screen to appear, sometimes you don't 
+- Ability to change loading screen shown
+	- In case there are times when gating progression makes sense, and others where it doesn't
 - Scene Cleanup
 	– Automatically unload previous scenes after switching to the new one
 - (Optional) DontDestroyOnLoad support for persistence across scenes
+	- Not sure why you wouldn't want this enabled for a tool like this, but it's an option just in case 
 
 ### Loading Screens 
 #### Base Classes (not meant to actually be used): 
