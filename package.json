@@ -1,0 +1,26 @@
+{
+  "name": "com.huntergoodin.scenebridge",
+  "version": "0.0.19",
+  "displayName": "Scene Bridge",
+  "description": "A simple additive scene loading system with a built-in loading screen workflow and other options.",
+  "documentationUrl": "https://github.com/Persomatey/unity-scene-bridge/blob/main/README.md",
+  "changelogUrl": "https://github.com/Persomatey/unity-scene-bridge/releases",
+  "license": "MIT",
+  "licensesUrl": "https://github.com/Persomatey/unity-scene-bridge/blob/main/LICENSE.md",
+  "unity": "6000.0",
+  "author": {
+    "name": "Hunter Goodin",
+    "url": "https://www.huntergoodin.tech"
+  },
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.render-pipelines.core": "17.0.4"
+  },
+  "samples": [
+    {
+      "displayName": "Example Scenes",
+      "description": "Scenes displaying the ability to load from one scene to another with all steps in between. Using temp images from 'jkjkke' on opengameart.com\n\nLoad into ExampleSceneA first since that's where the singleton is loaded.",
+      "path": "Samples~/ExampleScene"
+    }
+  ]
+}
