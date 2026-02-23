@@ -50,6 +50,12 @@ Or install specific releases:</br>
 - Custom loading screens 
 	- Loading screen can display the current progress of the `AsyncOperation`
 	- Loading screen can display various backgrounds with a random selection from an array in the `SceneBridge Loader` prefab
+ 		- (Optional) Text and image color synchronization accross background images
+			- `LoadingScreen.correlateTipColorWithBackgoundImg`
+			- `LoadingScreen.correlateHeaderColorWithBackgoundImg`
+			- `LoadingScreen.correlateloadingBarColorWithBackgoundImg`
+			- `InputSystemGatedLoadingScreen.correlateProgColorWithBackgoundImg`
+			- `InputManagerGatedLoadingScreen.correlateProgColorWithBackgoundImg`
 	- Loading screen can display various text snippets (for tips, lore tidbits, etc.) with a random selection from an array in the `SceneBridge Loader` prefab
  	- Five types of loading screens (more details in the [Loading Screens section](https://github.com/Persomatey/unity-scene-bridge/#loading-screens)):
 		```
@@ -119,7 +125,7 @@ Or install specific releases:</br>
 	- `InputSystemGatedLoadingScreen.cs`
 	- Uses Unity's new [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@latest/)
  	- Progression blocked behind a `if (anyButton.IsPressed())` logic gate 
-	- Example Canvas provided in the `SceneBridge Loader` prefab 
+	- Example Canvas provided in the `SceneBridge Loader` prefab
 
 ### Loading Functions 
 - Load Scene Asynchronously With Loading Screen And Transitions
