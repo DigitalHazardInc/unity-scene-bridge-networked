@@ -1,4 +1,4 @@
-# Unity Scene Bridge
+# SceneBridge
 
 A simple additive scene loading system with a built-in loading screen workflow.
 
