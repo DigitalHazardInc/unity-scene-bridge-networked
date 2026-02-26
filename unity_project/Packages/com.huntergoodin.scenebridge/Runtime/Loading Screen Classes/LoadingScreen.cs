@@ -10,10 +10,12 @@ namespace HunterGoodin.SceneBridge
 		[SerializeField] private TextMeshProUGUI headerTMP; 
 		[SerializeField] private Image backgroundImg;
 		[SerializeField] private TextMeshProUGUI tipTmp;
+		[SerializeField] private TextMeshProUGUI progressMessageTMP;
 		[SerializeField] private Image progressBar;
 
 		[Header("Color Coordination")]
 		[SerializeField] private bool correlateTipColorWithBackgoundImg;
+		[SerializeField] private bool correlateProgColorWithBackgoundImg;
 		[SerializeField] private bool correlateHeaderColorWithBackgoundImg;
 		[SerializeField] private bool correlateloadingBarColorWithBackgoundImg;
 		[SerializeField] internal Color[] colors;
@@ -34,6 +36,11 @@ namespace HunterGoodin.SceneBridge
 				tipTmp.color = colors[bgRand];
 			}
 
+			if (correlateProgColorWithBackgoundImg)
+			{
+				progressMessageTMP.color = colors[bgRand];
+			}
+
 			if (correlateHeaderColorWithBackgoundImg)
 			{
 				headerTMP.color = colors[bgRand];
@@ -50,6 +57,11 @@ namespace HunterGoodin.SceneBridge
 		public void SetLoadingBarAmount(float amount)
 		{
 			progressBar.fillAmount = amount;
+		}
+
+		public void UpdateProgressMessage(string msg)
+		{
+			progressMessageTMP.text = msg; 
 		}
 	}
 }

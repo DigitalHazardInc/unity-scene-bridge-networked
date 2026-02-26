@@ -7,13 +7,13 @@ namespace HunterGoodin.SceneBridge
 	public class InputSystemGatedLoadingScreen : LoadingScreen
 	{
 		private PlayerInput input;
-		private InputAction progressionAction;
+		private InputAction readyAction;
 
 		[Header("Scene References")]
-		[SerializeField] private GameObject progressionTMPObj;
+		[SerializeField] private GameObject readyTMPObj;
 
 		[Header("Color Coordination")]
-		[SerializeField] private bool correlateProgColorWithBackgoundImg;
+		[SerializeField] private bool correlateReadyColorWithBackgoundImg;
 
 		private void Awake()
 		{
@@ -22,9 +22,9 @@ namespace HunterGoodin.SceneBridge
 
 		private void Update()
 		{
-			if (progressionAction.IsPressed())
+			if (readyAction.IsPressed())
 			{
-				progressionTMPObj.SetActive(false);
+				readyTMPObj.SetActive(false);
 				SceneBridgeLoader.Instance.ContinueToNewScene();
 			}
 		}
@@ -32,20 +32,24 @@ namespace HunterGoodin.SceneBridge
 		internal new void OnEnable()
 		{
 			base.OnEnable();
-			progressionTMPObj.GetComponent<TextMeshProUGUI>().color = colors[bgRand];
 
-			progressionAction = input.LoadingScreen.Progression;
-			progressionAction.Enable();
+			if (correlateReadyColorWithBackgoundImg)
+			{
+				readyTMPObj.GetComponent<TextMeshProUGUI>().color = colors[bgRand];
+			}
+
+			readyAction = input.LoadingScreen.Progression;
+			readyAction.Enable();
 		}
 
 		private void OnDisable()
 		{
-			progressionAction.Disable();
+			readyAction.Disable();
 		}
 
 		public override void ReadyToLoadNewScene()
 		{
-			progressionTMPObj.SetActive(true); 
+			readyTMPObj.SetActive(true); 
 		}
 	}
 }

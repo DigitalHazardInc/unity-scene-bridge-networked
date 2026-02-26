@@ -1246,8 +1246,8 @@ MonoBehaviour:
   transitionOutIndexFirst: 0
   transitionInIndexSecond: 1
   transitionOutIndexSecond: 0
-  transitionInIndex: 0
-  transitionOutIndex: 0
+  transitionInIndex: 1
+  transitionOutIndex: 1
 --- !u!1 &1586069939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,6 +1734,10 @@ PrefabInstance:
     - target: {fileID: 1489853237857628362, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158422868382570588, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
+      propertyPath: transitionMidPointDuration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3668913004073616554, guid: 74ab7e4a01aa47444921cdd6b407969b, type: 3}
       propertyPath: textColors.Array.size

@@ -6,10 +6,10 @@ namespace HunterGoodin.SceneBridge
 	public class InputManagerGatedLoadingScreen : LoadingScreen
 	{
 		[Header("Scene References")]
-		[SerializeField] private GameObject progressionTMPObj;
+		[SerializeField] private GameObject readyTMPObj;
 
 		[Header("Color Coordination")]
-		[SerializeField] private bool correlateProgColorWithBackgoundImg;
+		[SerializeField] private bool correlateReadyColorWithBackgoundImg;
 
 		private void Update()
 		{
@@ -22,12 +22,16 @@ namespace HunterGoodin.SceneBridge
 		internal new void OnEnable()
 		{
 			base.OnEnable();
-			progressionTMPObj.GetComponent<TextMeshProUGUI>().color = colors[bgRand];
+
+			if (correlateReadyColorWithBackgoundImg)
+			{
+				readyTMPObj.GetComponent<TextMeshProUGUI>().color = colors[bgRand];
+			}
 		}
 
 		public override void ReadyToLoadNewScene()
 		{
-			progressionTMPObj.SetActive(true);
+			readyTMPObj.SetActive(true);
 		}
 	}
 }
