@@ -15,7 +15,8 @@
   "dependencies": {
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.render-pipelines.core": "17.0.4", 
-    "com.unity.inputsystem": "1.7.0"
+    "com.unity.inputsystem": "1.7.0",
+    "com.unity.netcode.gameobjects": "2.9.2"
   },
   "samples": [
     {

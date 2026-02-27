@@ -3,7 +3,8 @@
 	"rootNamespace": "HunterGoodin.SceneBridge",
 	"references": [
 	 	"Unity.TextMeshPro", 
-		"Unity.InputSystem"
+		"Unity.InputSystem", 
+		"Unity.Netcode.Runtime"
 	],
 	"includePlatforms": [],
 	"excludePlatforms": [],
