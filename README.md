@@ -15,9 +15,9 @@ Check out [Releases](https://github.com/Persomatey/unity-asynchronous-scene-load
 </details>
 
 For latest release:</br>
-`https://github.com/Persomatey/unity-scene-bridge.git#upm`</br>
+`https://github.com/DigitalHazardInc/unity-scene-bridge-networked.git#upm`</br>
 Or install specific releases:</br>
-`https://github.com/Persomatey/unity-scene-bridge.git#v0.0.1`
+`https://github.com/DigitalHazardInc/unity-scene-bridge-networked.git#v1.0.1`
 
 ### Download the tarball directly from release
 <details>
