@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "PlayerInput",
+    "maps": [
+        {
+            "name": "LoadingScreen",
+            "id": "dcfe1b75-184a-4d65-8561-712d337c1372",
+            "actions": [
+                {
+                    "name": "Progression",
+                    "type": "Button",
+                    "id": "04bde082-ab71-40e2-b906-9ccbc471fadf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d16b6761-6d16-412b-8683-e30aa597a272",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Progression",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
