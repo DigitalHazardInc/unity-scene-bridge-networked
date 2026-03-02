@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.Netcode;
+using System;
 
 namespace HunterGoodin.SceneBridge
 {
@@ -49,6 +50,9 @@ namespace HunterGoodin.SceneBridge
 		private int transInSecond;
 		private int transOutSecond;
 		private string oldSceneName;
+
+		public Action OnLoadStarted;
+		public Action OnLoadCompleted;
 
 		private void Awake()
 		{
@@ -108,43 +112,50 @@ namespace HunterGoodin.SceneBridge
 		}
 
 		[ServerRpc]
-		public async void StartSceneChangeWithTransitionServerRpc(string sceneName, int transitionInIndex, int transitionOutIndex)
+		public void StartSceneChangeWithTransitionServerRpc(string sceneName, int transitionInIndex, int transitionOutIndex)
 		{
-
+			newSceneName = sceneName;
 			SetBridgeParams(false, true, transitionInIndex, transitionOutIndex, -1, -1);
 
-			await StartSceneTransitionClientRpc(false, true, transitionInIndex, transitionOutIndex, -1, -1);
+			StartSceneTransitionClientRpc(false, true, transitionInIndex, transitionOutIndex, -1, -1);
 
-			NetworkManager.Singleton.SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
 		}
 
 		[ServerRpc]
-		public async void StartSceneChangeWithLoadingScreenServerRpc(string sceneName)
+		public void StartSceneChangeWithLoadingScreenServerRpc(string sceneName)
 		{
-
+			newSceneName = sceneName;
 			SetBridgeParams(true, false, -1, -1, -1, -1);
 
-			await StartSceneTransitionClientRpc(true, false, -1, -1, -1, -1);
+			StartSceneTransitionClientRpc(true, false, -1, -1, -1, -1);
 
 		}
 
 		[ServerRpc]
-		public async void StartSceneChangeWithLoadingScreenAndTransitionServerRpc(string sceneName, int transitionInIndexFirst, int transitionOutIndexFirst, int transitionInIndexSecond, int transitionOutIndexSecond)
+		public void StartSceneChangeWithLoadingScreenAndTransitionServerRpc(string sceneName, int transitionInIndexFirst, int transitionOutIndexFirst, int transitionInIndexSecond, int transitionOutIndexSecond)
 		{
-
+			newSceneName = sceneName;
 			SetBridgeParams(true, true, transitionInIndexFirst, transitionOutIndexFirst, transitionInIndexSecond, transitionOutIndexSecond);
 
-			await StartSceneTransitionClientRpc(true, true, transitionInIndexFirst, transitionOutIndexFirst, transitionInIndexSecond, transitionOutIndexSecond);
+			StartSceneTransitionClientRpc(true, true, transitionInIndexFirst, transitionOutIndexFirst, transitionInIndexSecond, transitionOutIndexSecond);
 		}
 
 		[ClientRpc]
-		public async Awaitable StartSceneTransitionClientRpc(bool loadingScreen, bool transition, int transitionInIndexFirst, int transitionOutIndexFirst, int transitionInIndexSecond, int transitionOutIndexSecond)
+		public void StartSceneTransitionClientRpc(bool loadingScreen, bool transition, int transitionInIndexFirst, int transitionOutIndexFirst, int transitionInIndexSecond, int transitionOutIndexSecond)
 		{
 			if (!NetworkManager.Singleton.IsHost)
 			{
 				SetBridgeParams(loadingScreen, transition, transitionInIndexFirst, transitionOutIndexFirst, transitionInIndexSecond, transitionOutIndexSecond);
 			}
 
+			isLoading = true;
+
+			StartSceneLoadTransition();
+
+		}
+
+		public async Awaitable StartSceneLoadTransition()
+		{
 			if (useTransition)
 			{
 				transitionCanvases[transInFirst].GetComponent<Animator>().SetTrigger("playTransitionIn");
@@ -169,7 +180,7 @@ namespace HunterGoodin.SceneBridge
 				chosenLoadingScreenCanvas.SetActive(true);
 				loadingScreenRef.SetLoadingBarAmount(0f);
 
-				if(useTransition)
+				if (useTransition)
 				{
 					if (transOutFirst != transInFirst)
 					{
@@ -183,11 +194,20 @@ namespace HunterGoodin.SceneBridge
 				}
 			}
 
+			if (IsHost)
+			{
+				NetworkManager.Singleton.SceneManager.LoadScene(newSceneName, LoadSceneMode.Additive);
+			}
+
+			if(OnLoadStarted != null)
+			{
+				OnLoadStarted.Invoke();
+			}
 		}
 
-		public async void FinishSceneLoadTransition()
+		public IEnumerator FinishSceneLoadTransition()
 		{
-			await RunGarbageCollection();
+			yield return RunGarbageCollection();
 
 			if (useLoadingScreen)
 			{
@@ -199,7 +219,7 @@ namespace HunterGoodin.SceneBridge
 				// Wait until the loading screen says we can progress 
 				do
 				{
-					await Awaitable.NextFrameAsync();
+					yield return new WaitForEndOfFrame();
 				}
 				while (!loadIntoNewSceenAllowed);
 
@@ -209,9 +229,9 @@ namespace HunterGoodin.SceneBridge
 					transitionCanvases[transInSecond].GetComponent<Animator>().SetTrigger("playTransitionIn");
 					transitionCanvases[transInSecond].GetComponent<Animator>().speed = (1.0f / animationDuration);
 					transitionCanvases[transInSecond].GetComponent<Animator>().updateMode = AnimatorUpdateMode.UnscaledTime;
-					await Awaitable.WaitForSecondsAsync(animationDuration + 0.1f);
+					yield return new WaitForSecondsRealtime(animationDuration + 0.1f);
 
-					await Awaitable.WaitForSecondsAsync(transitionMidPointMinDuration);
+					yield return new WaitForSecondsRealtime(transitionMidPointMinDuration);
 
 					// Deactivate loading screen 
 					loadingScreenRef.SetLoadingBarAmount(0.0f);
@@ -228,14 +248,18 @@ namespace HunterGoodin.SceneBridge
 					transitionCanvases[transOutSecond].GetComponent<Animator>().updateMode = AnimatorUpdateMode.UnscaledTime;
 					Time.timeScale = 1f;
 
-					await Awaitable.WaitForSecondsAsync(animationDuration + 0.1f);
+					yield return new WaitForSecondsRealtime(animationDuration + 0.1f);
+				}
+				else
+				{
+					Time.timeScale = 1f;
 				}
 
 			}
 			else
 			{
 				// Let's still to the mid point wait 
-				await Awaitable.WaitForSecondsAsync(transitionMidPointMinDuration);
+				yield return new WaitForSecondsRealtime(transitionMidPointMinDuration);
 
 				// Play transition out animation 
 				if (transOutFirst != transInFirst)
@@ -248,7 +272,7 @@ namespace HunterGoodin.SceneBridge
 				transitionCanvases[transOutFirst].GetComponent<Animator>().updateMode = AnimatorUpdateMode.UnscaledTime;
 				Time.timeScale = 1f;
 
-				await Awaitable.WaitForSecondsAsync(animationDuration + 0.1f);
+				yield return new WaitForSecondsRealtime(animationDuration + 0.1f);
 			}
 
 			loadIntoNewSceenAllowed = false;
@@ -259,6 +283,9 @@ namespace HunterGoodin.SceneBridge
 
 		public async void HandleSceneEvent(SceneEvent sceneEvent)
 		{
+			if (!isLoading)
+				return;
+
 			if (NetworkManager.Singleton.LocalClientId != sceneEvent.ClientId)
 				return;
 
@@ -298,8 +325,14 @@ namespace HunterGoodin.SceneBridge
 							return;
 						}
 
+						SceneManager.SetActiveScene(newScene);
 						NetworkManager.Singleton.SceneManager.UnloadScene(SceneManager.GetSceneByName(oldSceneName));
 
+					}
+
+					if (OnLoadCompleted != null)
+					{
+						OnLoadCompleted.Invoke();
 					}
 					break;
 				case SceneEventType.Unload:
@@ -332,12 +365,12 @@ namespace HunterGoodin.SceneBridge
 					{
 						Debug.Log("...old scene unloaded");
 					}
-					FinishSceneLoadTransition();
+					StartCoroutine(FinishSceneLoadTransition());
 					break;
 			}
 		}
 
-		public async Awaitable RunGarbageCollection()
+		public IEnumerator RunGarbageCollection()
 		{
 			if (logSceneAsyncOperations)
 			{
@@ -367,7 +400,7 @@ namespace HunterGoodin.SceneBridge
 					displayed = Mathf.MoveTowards(displayed, target, Time.unscaledDeltaTime);
 					loadingScreenRef.SetLoadingBarAmount(displayed);
 				}
-				await Awaitable.NextFrameAsync();
+				yield return new WaitForEndOfFrame();
 			}
 			while (!gcOp.isDone);
 
@@ -380,7 +413,7 @@ namespace HunterGoodin.SceneBridge
 
 			if (logSceneAsyncOperations)
 			{
-				Debug.Log("...garbage collection");
+				Debug.Log("...garbage collected");
 			}
 		}
 
